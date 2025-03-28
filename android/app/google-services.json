@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880678435091",
+    "project_id": "tugasflutter-8156f",
+    "storage_bucket": "tugasflutter-8156f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880678435091:android:c3dd5e72c141c6562182e6",
+        "android_client_info": {
+          "package_name": "com.example.tugas_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlzofxL6X_BqqH2e3bwvAtGgFX4UdJfKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
