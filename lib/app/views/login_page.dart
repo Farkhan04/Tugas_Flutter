@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tugas_flutter/app/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
-    const LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -19,21 +19,42 @@ class _LoginPageState extends State<LoginPage> {
       // Arahkan ke halaman home setelah berhasil login
       Navigator.pushReplacementNamed(context, '/home');
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login gagal: $e')));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Login gagal: $e')));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login')),
+      appBar: AppBar(title: Text('Selamat Datang \nSilahkan Masuk',)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(controller: _emailController, decoration: InputDecoration(labelText: 'Email')),
-            TextField(controller: _passwordController, obscureText: true, decoration: InputDecoration(labelText: 'Password')),
-            ElevatedButton(onPressed: _login, child: Text('Login'))
+            Image.asset('assets/images/logo1.png'),
+            TextField(
+              controller: _emailController,
+              decoration: InputDecoration(labelText: 'Email'),
+            ),
+            TextField(
+              controller: _passwordController,
+              obscureText: true,
+              decoration: InputDecoration(labelText: 'Password'),
+            ),
+            // Tambahkan tombol untuk mengarahkan ke halaman register
+            TextButton(
+              onPressed: () {
+                // Arahkan ke halaman register
+                Navigator.pushNamed(context, '/register');
+              },
+              child: Text(
+                'Belum punya akun? Daftar di sini',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            ElevatedButton(onPressed: _login, child: Text('Login')),
           ],
         ),
       ),
